@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mawshook.android_pos.about.AboutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/app_logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sailec_regular"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="5dp"
+                android:text="ShopN'Cart"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sailec_regular"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="ShopN'Cart is a Smart Solution for your any shop. Manage your daily sales smartly by using ShopN'Cart Online POS"
+                android:textColor="@color/transparent_black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:autoLink="web"
+                android:fontFamily="@font/sailec_regular"
+                android:gravity="center"
+                android:text="www.shopncart.com" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:autoLink="email"
+                android:fontFamily="@font/sailec_regular"
+                android:gravity="center"
+                android:text="shopncart@gmail.com" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

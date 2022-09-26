@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mawshook.android_pos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="com.mawshook.android_pos.utils.MultiLanguageApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.mawshook.android_pos.bt_device.DeviceListActivity"></activity>
+        <activity android:name="com.mawshook.android_pos.about.AboutActivity" />
+        <activity android:name="com.mawshook.android_pos.login.LoginActivity" />
+        <activity android:name="com.mawshook.android_pos.settings.payment_method.EditPaymentMethodActivity" />
+        <activity android:name="com.mawshook.android_pos.settings.payment_method.AddPaymentMethodActivity" />
+        <activity android:name="com.mawshook.android_pos.settings.payment_method.PaymentMethodActivity" />
+        <activity android:name="com.mawshook.android_pos.settings.categories.CategoriesActivity" />
+        <activity android:name="com.mawshook.android_pos.expense.EditExpenseActivity" />
+        <activity android:name="com.mawshook.android_pos.suppliers.EditSuppliersActivity" />
+        <activity android:name="com.mawshook.android_pos.customers.EditCustomersActivity" />
+        <activity android:name="com.mawshook.android_pos.product.EditProductScannerViewActivity" />
+        <activity android:name="com.mawshook.android_pos.pdf_report.ViewPDFActivity" />
+        <activity android:name="com.mawshook.android_pos.pos.ScannerActivity" />
+        <activity android:name="com.mawshook.android_pos.product.ScannerViewActivity" />
+        <activity android:name="com.mawshook.android_pos.product.EditProductActivity" />
+        <activity android:name="com.mawshook.android_pos.settings.shop.ShopInformationActivity" />
+        <activity android:name="com.mawshook.android_pos.report.ExpenseGraphActivity" />
+        <activity android:name="com.mawshook.android_pos.report.ExpenseReportActivity" />
+        <activity android:name="com.mawshook.android_pos.expense.AddExpenseActivity" />
+        <activity android:name="com.mawshook.android_pos.settings.SettingsActivity" />
+        <activity android:name="com.mawshook.android_pos.expense.ExpenseActivity" />
+        <activity android:name="com.mawshook.android_pos.report.GraphReportActivity" />
+        <activity android:name="com.mawshook.android_pos.report.SalesReportActivity" />
+        <activity android:name="com.mawshook.android_pos.report.ReportActivity" />
+        <activity android:name="com.mawshook.android_pos.orders.OrderDetailsActivity" />
+        <activity android:name="com.mawshook.android_pos.orders.OrdersActivity" />
+        <activity android:name="com.mawshook.android_pos.pos.ProductCart" />
+        <activity android:name="com.mawshook.android_pos.pos.PosActivity" />
+        <activity android:name="com.mawshook.android_pos.product.AddProductActivity" />
+        <activity android:name="com.mawshook.android_pos.product.ProductActivity" />
+        <activity android:name="com.mawshook.android_pos.suppliers.AddSuppliersActivity" />
+        <activity android:name="com.mawshook.android_pos.suppliers.SuppliersActivity" />
+        <activity android:name="com.mawshook.android_pos.customers.AddCustomersActivity" />
+        <activity android:name="com.mawshook.android_pos.customers.CustomersActivity" />
+        <activity android:name="com.mawshook.android_pos.HomeActivity" />
+        <activity android:name="com.mawshook.android_pos.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_application_id" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>
